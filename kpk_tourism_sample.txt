@@ -1,0 +1,14 @@
+KPK Tourism Knowledge Base — Sample
+
+This is demonstration data only. Replace or supplement it with official
+tourism documents before the hackathon.
+
+Example destinations for the prototype:
+- Swat
+- Kalam
+- Malam Jabba
+- Chitral
+- Naran and Kaghan
+
+Travelers should verify current weather, road conditions, opening status,
+local rules, and official travel advisories before travel.
