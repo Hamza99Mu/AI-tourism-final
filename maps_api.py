@@ -1,4 +1,4 @@
-from .config import get_secret
+from config import get_secret
 
 def search_places(location):
     # Extension point for the Maps/Places provider selected for your project.
