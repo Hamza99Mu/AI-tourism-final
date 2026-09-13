@@ -1,4 +1,4 @@
-```python
+
 import streamlit as st
 
 # Root-level imports
@@ -232,4 +232,3 @@ st.divider()
 st.caption(
     "Verify important travel information with official sources before travel."
 )
-```
