@@ -1,5 +1,5 @@
 import numpy as np
-from .embeddings import LocalHashEmbeddings
+from embeddings import LocalHashEmbeddings
 
 class SimpleVectorStore:
     def __init__(self):
