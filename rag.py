@@ -1,7 +1,8 @@
 import streamlit as st
-from .document_loader import load_documents, split_text
-from .vectorstore import SimpleVectorStore
-from .config import get_secret
+
+from document_loader import load_documents, split_text
+from vectorstore import SimpleVectorStore
+from config import get_secret
 
 @st.cache_resource
 def build_vector_store():
