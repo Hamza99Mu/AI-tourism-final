@@ -1,6 +1,5 @@
 import requests
-from .config import get_secret
-
+from config import get_secret
 def get_weather(location):
     key = get_secret("OPENWEATHER_API_KEY")
     if not key:
