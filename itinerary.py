@@ -1,4 +1,4 @@
-from .config import get_secret
+from config import get_secret
 
 def generate_itinerary(destination, days, budget, travel_type, language, tourism_context):
     key = get_secret("OPENAI_API_KEY")
