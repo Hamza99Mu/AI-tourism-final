@@ -1,8 +1,8 @@
 import streamlit as st
-from src.rag import answer_with_rag
-from src.itinerary import generate_itinerary
-from src.weather_api import get_weather
-from src.maps_api import search_places
+from rag import answer_with_rag
+from itinerary import generate_itinerary
+from weather_api import get_weather
+from maps_api import search_places
 
 st.set_page_config(page_title="AI Tourism Assistant", page_icon="🏔️", layout="wide")
 st.title("🏔️ AI Tourism Assistant")
