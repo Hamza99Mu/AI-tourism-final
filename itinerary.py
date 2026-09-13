@@ -1,14 +1,15 @@
+import os
 from config import get_secret
+from groq import Groq
 
 def generate_itinerary(destination, days, budget, travel_type, language, tourism_context):
-    key = get_secret("OPENAI_API_KEY")
+    key = get_secret("GROQ_API_KEY") or os.getenv("GROQ_API_KEY")
     if not key:
         return (f"### 🏔️ {destination} — {days}-Day Starter Plan\n\n"
                 f"- Travel type: {travel_type}\n- Budget: PKR {budget:,}\n\n"
-                "Configure OPENAI_API_KEY for AI-generated personalized planning.")
+                "Configure GROQ_API_KEY for AI-generated personalized planning.")
     try:
-        from openai import OpenAI
-        client = OpenAI(api_key=key)
+        client = Groq(api_key=key)
         prompt = f"""Create a practical {days}-day itinerary for {destination}, Pakistan.
 Travel type: {travel_type}
 Budget: PKR {budget:,}
@@ -19,7 +20,7 @@ Respond in {language}.
 Tourism context:
 {tourism_context}"""
         response = client.chat.completions.create(
-            model=get_secret("OPENAI_MODEL", "gpt-4o-mini"),
+            model=get_secret("GROQ_MODEL", "llama-3.3-70b-versatile"),
             messages=[
                 {"role": "system", "content": "You are a careful travel planner."},
                 {"role": "user", "content": prompt},
